@@ -18,7 +18,7 @@ class TimeStampedModel(models.Model):
 
     """
     created = AutoCreatedField(_('created'))
-    modified = AutoLastModifiedField(_('modified'))
+    modified = AutoLastModifiedField(_('modified'), db_index=True)
 
     class Meta:
         abstract = True
